@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      background: linear-gradient(to right, #f06292, #f8bbd0);
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      width: 80%;
+      max-width: 700px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+      font-family: 'Pacifico', cursive, sans-serif;
+      margin: 0;
+    }
+
+    .balloons {
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .balloon:nth-child(1) {
+      background-color: #ff80ab;
+      animation-delay: 0s;
+    }
+
+    .balloon:nth-child(2) {
+      background-color: #e1bee7;
+      animation-delay: 1s;
+    }
+
+    .balloon:nth-child(3) {
+      background-color: #f8bbd0;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(4) {
+      background-color: #f48fb1;
+      animation-delay: 3s;
+    }
+
+    .balloon:nth-child(5) {
+      background-color: #ffccbc;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .confetti .confetti-piece {
+      width: 10px;
+      height: 10px;
+      margin: 3px;
+      animation: confetti-fall 3s linear infinite;
+      border-radius: 50%;
+    }
+
+    .confetti .confetti-piece:nth-child(odd) {
+      background-color: #ff80ab;
+    }
+
+    .confetti .confetti-piece:nth-child(even) {
+      background-color: #f06292;
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    .hearts {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: hearts-fall 4s linear infinite;
+      z-index: 50;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background-color: #ff4081;
+      margin: 5px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: heart-float 5s ease-in-out infinite;
+    }
+
+    .heart:nth-child(odd) {
+      animation-delay: 1s;
+    }
+
+    @keyframes hearts-fall {
+      0% {
+        transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) translateY(100vh) rotate(360deg);
+      }
+    }
+
+    @keyframes heart-float {
+      0% {
+        transform: scale(1) translateY(0);
+      }
+      50% {
+        transform: scale(1.2) translateY(-50px);
+      }
+      100% {
+        transform: scale(1) translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>HEPPI BUDDAY Priyam</h1>
+  </div>
+
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <div class="confetti">
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+    <div class="confetti-piece"></div>
+  </div>
+
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+</body>
+</html>
